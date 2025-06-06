@@ -12,11 +12,11 @@ const SignIn = () => {
         <Link href="/">
           <Image
             src="/assets/icons/logo.svg"
-            alt="SnapChat Logo"
+            alt="CaptureDesk Logo"
             width={32}
             height={32}
           />
-          <h1>SnapCast</h1>
+          <h1>CaptureDesk</h1>
         </Link>
 
         <div className="description">
@@ -33,25 +33,25 @@ const SignIn = () => {
               ))}
             </figure>
             <p>
-            SnapCast makes screen recording easy. From quick walkthroughs to
+            CaptureDesk makes screen recording easy. From quick walkthroughs to
               full presentations, it&apos;s fast, smooth, and shareable in seconds
             </p>
             <article>
               <Image
-                src="/assets/images/jason.png"
+                src="/assets/images/dummy.jpg"
                 alt="Jason"
                 width={64}
                 height={64}
                 className="rounded-full"
               />
               <div>
-                <h2>Jason Rivera</h2>
-                <p>Product Designer, NovaByte</p>
+                <h2>Divyanshu Rajput</h2>
+                <p>Founder of CaptureDesk</p>
               </div>
             </article>
           </section>
         </div>
-        <p>© Snapcast 2025</p>
+        <p>© CaptureDesk 2025</p>
       </aside>
       <aside className="google-sign-in">
         <section>
@@ -62,10 +62,10 @@ const SignIn = () => {
               width={40}
               height={40}
             />
-            <h1>SnapCast</h1>
+            <h1>CaptureDesk</h1>
           </Link>
           <p>
-            Create and share your very first <span>SnapCast video</span> in no
+            Create and share your very first <span>CaptureDesk video</span> in no
             time!
           </p>
 
