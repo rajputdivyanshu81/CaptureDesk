@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Divyanshu-Rajput-s-workspace-nlj8ef.ap-southeast-2.xata.sh/db/jsm_capturedesk",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
