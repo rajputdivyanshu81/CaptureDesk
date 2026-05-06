@@ -156,3 +156,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 
 
+
+<img width="1533" height="1026" alt="ChatGPT Image May 6, 2026, 07_51_06 PM" src="https://github.com/user-attachments/assets/3d7bb4d3-13c6-459b-8ecc-7ba9bf71b38c" />
+
