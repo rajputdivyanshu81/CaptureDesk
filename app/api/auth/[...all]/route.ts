@@ -20,7 +20,7 @@ const rateLimit = aj.withRule(
   slidingWindow({
     mode: "LIVE",
     interval: "2m",
-    max: 2,
+    max: 20,
     characteristics: ["fingerprint"],
   })
 );
@@ -41,12 +41,16 @@ const protectedAuth = async (req: NextRequest): Promise<ArcjetDecision> => {
   } else {
     userId = ip(req) || "127.0.0.1";
   }
-  if (req.nextUrl.pathname.startsWith("/api/auth/sign-in")) {
-    const body = await req.clone().json();
-    if (typeof body.email === "string") {
-      return emailValidation.protect(req, {
-        email: body.email,
-      });
+  if (req.nextUrl.pathname === "/api/auth/sign-in/email") {
+    try {
+      const body = await req.clone().json();
+      if (body && typeof body.email === "string") {
+        return emailValidation.protect(req, {
+          email: body.email,
+        });
+      }
+    } catch (e) {
+      // Body might be empty or invalid JSON
     }
   }
   if (!req.nextUrl.pathname.startsWith("/api/auth/sign-out")) {
