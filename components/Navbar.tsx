@@ -2,11 +2,18 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { useRouter } from 'next/navigation'
-
-const user = {};
+import { authClient } from "@/lib/auth-client"
 
 const Navbar = () => {
   const router = useRouter();
+  const { data: session } = authClient.useSession();
+  const user = session?.user;
+
+  const handleLogout = async () => {
+    await authClient.signOut();
+    router.push('/sign-in');
+  };
+
   return (
     <header className='navbar'>
       <nav>
@@ -25,16 +32,16 @@ const Navbar = () => {
         {user && (
             <figure>
                 <button 
-                onClick={() => router.push('/profile/123')}>
+                onClick={() => router.push(`/profile/${user.id}`)}>
                     <Image 
-                      src="/assets/images/dummy.jpg" 
+                      src={user.image || "/assets/images/dummy.jpg"} 
                       alt='user profile' 
                       width={36} 
                       height={36} 
                       className='rounded-full aspect-square' 
                     />
                 </button>
-                <button className='cursor-pointer'>
+                <button className='cursor-pointer' onClick={handleLogout}>
                     <Image 
                       src="/assets/icons/logout.svg" 
                       alt='logout' 
