@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Karla } from "next/font/google";
 import "./globals.css";
 import { satoshi } from "../fonts/font";
+import { Analytics } from "@vercel/analytics/next";
 
 const geistKarla = Karla({
   variable: "--font-geist-karla",
@@ -27,6 +28,7 @@ export default function Layout({
         className={`${geistKarla.variable} ${satoshi.variable} font-karla antialiased`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );
