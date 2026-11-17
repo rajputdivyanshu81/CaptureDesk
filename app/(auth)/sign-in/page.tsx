@@ -46,7 +46,7 @@ const SignIn = () => {
               />
               <div>
                 <h2>Divyanshu Rajput</h2>
-                <p>Founder of CaptureDesk</p>
+                <p>Software Engineer</p>
               </div>
             </article>
           </section>
