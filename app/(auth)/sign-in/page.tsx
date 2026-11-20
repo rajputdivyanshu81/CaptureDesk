@@ -33,8 +33,9 @@ const SignIn = () => {
               ))}
             </figure>
             <p>
-            CaptureDesk makes screen recording easy. From quick walkthroughs to
-              full presentations, it&apos;s fast, smooth, and shareable in seconds
+              Record, share, and collaborate in seconds. CaptureDesk turns your
+              screen into polished walkthroughs, demos, and presentations — no
+              hassle, just one click to capture and a link to share.
             </p>
             <article>
               <Image
