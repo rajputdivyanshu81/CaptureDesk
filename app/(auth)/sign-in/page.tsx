@@ -47,7 +47,6 @@ const SignIn = () => {
               />
               <div>
                 <h2>Divyanshu Rajput</h2>
-                <p>Software Engineer</p>
               </div>
             </article>
           </section>
